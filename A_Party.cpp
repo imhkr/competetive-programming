@@ -21,15 +21,28 @@ using namespace std;
  
 int32_t main(){
 fast
+/*
 int t=1;
 cin>>t;
-while(t--){
-    int x,y,n;
-    cin>>x>>y>>n;
-    int st=0;
-        st=(n-y)/x*x+y;
-        cout<<st<<endl;
-    
+while(t--){*/
+    int n;
+    cin>>n;
+    vector<int>ep;
+    for(int i=0;i<n;i++)
+    {
+        int x;
+        cin>>x;
+        ep.push_back(x);
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(ep[i]=='-1')
+        {
+            cnt++;
+        }
+        
+    }
+
 }
 return 0;
 }

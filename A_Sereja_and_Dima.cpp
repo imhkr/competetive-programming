@@ -1,4 +1,5 @@
 /**********  author:Himanshu Patel   *********/
+//using two pointer approach 
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -21,15 +22,39 @@ using namespace std;
  
 int32_t main(){
 fast
+/*
 int t=1;
 cin>>t;
-while(t--){
-    int x,y,n;
-    cin>>x>>y>>n;
-    int st=0;
-        st=(n-y)/x*x+y;
-        cout<<st<<endl;
-    
 }
+while(t--){*/
+    int n;
+    cin>>n;
+    int s=0,d=0;
+    int ge[n];
+    for(int i=1;i<=n;i++)
+    {
+        cin>>ge[i];
+    }
+    int to=0,fn=1,ln=n;
+   for(int i=1;i<=n;i++)
+   {
+       if(ge[fn]>ge[ln])
+       {
+           to=ge[fn++];
+       }
+       else
+       {
+           to=ge[ln--];
+       }
+       if(i%2==1)
+       {
+           s+=to;
+       }
+       else
+       {
+           d+=to;
+       }
+   }
+   cout<<s<<" "<<d<<endl;
 return 0;
 }

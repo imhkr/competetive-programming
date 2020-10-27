@@ -21,15 +21,28 @@ using namespace std;
  
 int32_t main(){
 fast
-int t=1;
-cin>>t;
-while(t--){
-    int x,y,n;
-    cin>>x>>y>>n;
-    int st=0;
-        st=(n-y)/x*x+y;
-        cout<<st<<endl;
-    
-}
-return 0;
+// int t=1;
+// cin>>t;
+// while(t--){
+    int n;
+    cin>>n;
+    if(n>=0)
+    {
+        cout<<n<<endl;
+    }
+    else
+    {
+            int lastdigit=n/10;
+            int secondlastdigit=n%10+(n/100)*10;
+            if(lastdigit>=secondlastdigit)
+            {
+                cout<<lastdigit<<endl;
+            }
+            else
+            {
+                cout<<secondlastdigit<<endl;
+            }
+            
+    }
+    return 0;
 }
